@@ -1,9 +1,61 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+.grid {
+  overflow: auto;
+  max-width: 600px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.header :not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.headerItem {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.content {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: 0;
+}
+
+.content .cell:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.content .row:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.headerItem,
+.cell {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerItem:hover {
+  background-color: rgba(0, 0, 255, 0.6);
+}
+
+.cell:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
